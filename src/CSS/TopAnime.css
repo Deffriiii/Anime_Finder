@@ -1,0 +1,150 @@
+/* Styling untuk konten Home */
+.top {
+  padding: 20px;
+  text-align: center;
+  background-color: #141414; /* Warna latar belakang hitam gelap */
+  min-height: 100vh; /* Halaman Home memenuhi layar secara penuh */
+}
+
+/* Styling untuk judul di halaman Home */
+.top h2 {
+  text-align: left;
+  font-style: italic;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  font-size: 2rem; /* Ukuran font sedikit lebih besar */
+  color: #39ff14; /* Warna hijau */
+}
+
+/* Container untuk menyusun anime-card secara sejajar */
+ul {
+  display: flex;
+  flex-wrap: wrap; /* Agar kartu membungkus jika layar sempit */
+  justify-content: center; /* Susun kartu di tengah */
+  gap: 20px; /* Tambahkan jarak antar kartu */
+  list-style-type: none; /* Hilangkan bullet dari list */
+  padding: 0;
+  margin: 0;
+}
+
+.anime-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%; /* Memastikan gambar tidak melebihi batas kontainer */
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto; /* Pastikan gambar tidak terdistorsi */
+  object-fit: cover; /* Memastikan gambar menutupi area dengan cara yang benar */
+  transition: transform 0.3s ease; /* Efek transisi untuk zoom */
+}
+
+.anime-card h3 {
+  margin: 10px 0;
+}
+
+.anime-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-gap: 10px; /* Jarak antara gambar */
+}
+
+/* Efek zoom in saat kursor berada di atas grid */
+.anime-card:hover {
+  transform: scale(1.05); /* Memperbesar gambar saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
+}
+
+.anime-card img:hover {
+  transform: scale(1.1); /* Memperbesar gambar saat hover */
+}
+
+/* Container untuk input dan tombol pencarian */
+.search-container-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Styling untuk input pencarian */
+.search-input-top {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+/* Styling untuk tombol pencarian */
+.search-button-top {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #2ecb12; /* Warna hijau */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.back-button-top {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2ecb12; /* Warna hijau */
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-button-top:hover {
+  background-color: #161716; /* Warna hijau lebih gelap saat hover */
+  
+}
+.back-button-top:hover {
+  background-color: #161716; /* Warna hijau lebih gelap saat hover */
+  
+}
+
+/* Menampilkan 2 gambar per baris di perangkat mobile */
+@media (max-width: 600px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-button-top {
+    padding-left: 20px;
+  }
+}
+
+/* Menampilkan 3 gambar per baris di tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Menampilkan 5 gambar per baris di desktop */
+@media (min-width: 901px) {
+  ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

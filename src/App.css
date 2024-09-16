@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Gaya umum */
+body {
+  margin: 0; /* Menghilangkan margin default pada body */
+  padding: 0;
+  background: linear-gradient(#ffffff, #000); /* Gradien dari putih ke hitam */
+  height: 100vh; /* Membuat tinggi halaman 100% dari viewport */
+  font-family: Arial, sans-serif; /* Font default */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Gaya Navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between; /* Memastikan logo dan menu berada di ujung yang berlawanan */
+  align-items: center; /* Memastikan elemen di dalam navbar berada di tengah secara vertikal */
+  padding: 1rem 2rem; /* Padding di sekitar navbar */
+  background-color: #000; /* Warna latar belakang untuk navbar */
+  color: #fff; /* Warna teks default */
+  flex-wrap: wrap; /* Memungkinkan elemen navbar untuk membungkus pada ukuran layar yang lebih kecil */
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .logo {
+  font-size: 1.5rem; /* Ukuran font untuk logo */
+  font-weight: bold; /* Menebalkan font logo */
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar .logo span {
+  color: #39ff14;
+}
+
+.navbar .logo:hover {
+  color: #39ff14; /* Ganti dengan warna yang diinginkan saat hover */
+}
+
+.navbar .logo span:hover {
+  color: #fff;
+}
+
+.navbar nav ul {
+  list-style: none; /* Menghapus penanda default dari daftar */
+  display: flex; /* Menggunakan flexbox untuk menyusun item secara horizontal */
+  gap: 1rem; /* Jarak antar tautan */
+  margin: 0; /* Menghapus margin default */
+  padding: 0; /* Menghapus padding default */
+}
+
+.navbar nav a {
+  color: #fff; /* Warna teks untuk tautan */
+  text-decoration: none; /* Menghapus garis bawah dari tautan */
+  padding: 0.5rem 1rem; /* Menambahkan padding di sekitar tautan */
+  border-radius: 4px; /* Membulatkan sudut tautan */
+  transition: background-color 0.3s; /* Transisi halus saat hover */
+}
+
+.navbar nav a:hover {
+  color: #39ff14; /* Warna latar belakang saat tautan di-hover */
+}
+
+.search-icon {
+  font-size: 1.2rem; /* Ukuran font untuk ikon pencarian */
+  color: #fff; /* Warna ikon pencarian */
+}
+
+/* Media Queries untuk Responsif pada HP */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Menyusun elemen navbar secara horizontal pada layar kecil */
+    padding: 1rem; /* Padding yang lebih kecil pada layar kecil */
+    align-items: center; /* Menyelaraskan elemen di dalam navbar secara vertikal */
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar nav ul {
+    flex-direction: row; /* Menyusun item menu secara horizontal pada layar kecil */
+    font-size: 1rem; /* Ukuran font yang lebih kecil untuk item menu */
+    gap: 1rem; /* Jarak antar tautan */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+  }
+
+  .navbar .logo {
+    font-size: 1.5rem; /* Ukuran font yang lebih kecil untuk logo pada layar kecil */
+    margin-right: auto; /* Menarik logo ke kiri */
+  }
+
+  .search-icon {
+    font-size: 1rem; /* Ukuran font yang lebih kecil untuk ikon pencarian pada layar kecil */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navbar nav a {
+    padding: 1rem; /* Padding yang lebih kecil pada tautan pada layar kecil */
+  }
+
+  .navbar nav ul {
+    flex-direction: row; /* Menyusun item menu secara horizontal pada layar kecil */
+    font-size: 1rem; /* Ukuran font yang lebih kecil untuk item menu */
+    gap: 1rem; /* Jarak antar tautan */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+  }
+
+  .navbar .logo {
+    font-size: 1rem; /* Ukuran font yang lebih kecil untuk logo pada layar sangat kecil */
+    text-align: left;
+  }
+
+  .search-icon {
+    font-size: 0.9rem; /* Ukuran font yang lebih kecil untuk ikon pencarian pada layar sangat kecil */
   }
 }

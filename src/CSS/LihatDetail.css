@@ -1,0 +1,67 @@
+/* CSS untuk halaman LihatDetail */
+.detail {
+    padding: 20px;
+    background-color: #1a1a1a; /* Latar belakang gelap */
+    color: #ffffff; /* Teks putih untuk kontras */
+    text-align: center; /* Teks di tengah */
+    min-height: 100vh; /* Agar halaman memenuhi tinggi layar */
+  }
+  
+  .detail h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #00ffff; /* Warna cyan untuk judul */
+    text-transform: uppercase; /* Judul dalam huruf besar */
+  }
+  
+  .detail img {
+    width: 100%;
+    max-width: 300px; /* Batas maksimum ukuran gambar */
+    height: auto;
+    border-radius: 8px; /* Gambar dengan sudut melengkung */
+    margin-bottom: 20px;
+  }
+  
+  .detail p {
+    font-size: 1rem;
+    color: #cccccc; /* Warna teks abu-abu muda untuk keterbacaan */
+    line-height: 1.6; /* Spasi antar baris lebih besar */
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  .detail p strong {
+    color: #39ff14; /* Hijau neon untuk elemen yang ditekankan */
+  }
+  
+  .detail iframe {
+    width: 100%;
+    max-width: 560px; /* Batas maksimum lebar video */
+    height: 315px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Bayangan lembut di sekitar video */
+  }
+  
+  .detail h3 {
+    font-size: 1.8rem;
+    color: #39ff14; /* Warna hijau neon untuk judul trailer */
+    margin-top: 30px;
+  }
+
+  .back-btn:hover {
+    background-color: #555;
+}
+  
+  /* Styling tambahan untuk kesesuaian layout di perangkat kecil */
+  @media (max-width: 768px) {
+    .detail img {
+      max-width: 100%; /* Gambar memenuhi lebar layar pada perangkat kecil */
+    }
+  
+    .detail iframe {
+      height: auto;
+      max-width: 100%; /* Video menyesuaikan lebar layar */
+    }
+  }
+  
