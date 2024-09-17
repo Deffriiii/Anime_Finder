@@ -220,3 +220,34 @@ ul {
   background-color: #161716; /* Warna hijau lebih gelap saat hover */
 }
 
+/* Menampilkan 2 gambar per baris di perangkat mobile */
+@media (max-width: 600px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-button {
+   padding: 5px 10px;
+   font-size: 12px;
+   width: auto;
+  }
+  .back-button {
+   padding: 5px 10px;
+   font-size: 12px;
+   width: auto;
+  }
+}
+
+/* Menampilkan 3 gambar per baris di tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Menampilkan 5 gambar per baris di desktop */
+@media (min-width: 901px) {
+  ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

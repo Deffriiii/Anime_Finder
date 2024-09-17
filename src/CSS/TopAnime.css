@@ -131,7 +131,14 @@ ul {
   }
 
   .search-button-top {
-    padding-left: 20px;
+   padding: 5px 10px;
+   font-size: 12px;
+   width: auto;
+  }
+  .back-button-top {
+   padding: 5px 10px;
+   font-size: 12px;
+   width: auto;
   }
 }
 
