@@ -73,6 +73,22 @@ ul {
   transform: scale(1.1); /* Memperbesar gambar saat hover */
 }
 
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Agar footer selalu di bagian bawah */
+}
+
+.copyright {
+  text-align: center;
+  font-style: italic;
+  padding: 20px 0;
+  color: #2ecb12;
+  font-size: 14px;
+  margin-top: auto; /* Untuk memastikan footer di bagian bawah */
+}
+
 /* Container untuk input dan tombol pencarian */
 .search-container-top {
   display: flex;

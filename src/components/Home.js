@@ -82,6 +82,11 @@ function Home() {
                     <AnimeCard key={animeItem.mal_id} animeItem={animeItem} />
                 ))}
             </ul>
+
+            {/* Tambahkan footer di sini */}
+            <footer className="copyright">
+                &copy; 2024 Defri Prasetyo. All rights reserved.
+            </footer>
         </div>
     );
 }

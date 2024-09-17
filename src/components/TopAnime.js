@@ -36,7 +36,7 @@ function TopAnime() {
 
   const handleBack = () => {
     navigate(-1); // Mengarahkan pengguna kembali ke halaman sebelumnya
-};
+  };
 
   if (loading) {
     return (
@@ -61,23 +61,29 @@ function TopAnime() {
           type="text"
           className="search-input-top"
           placeholder="Search for anime..."
-          value={query} // Menggunakan state query
-          onChange={(e) => setQuery(e.target.value)} // Mengatur perubahan input untuk query
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
         <button className="search-button-top" onClick={handleSearch}>
           Search
         </button>
         <button onClick={handleBack} className="back-button-top">
-           Back
-         </button>
+          Back
+        </button>
       </div>
       <ul>
         {filteredAnime.map((animeItem) => (
           <AnimeCard key={animeItem.mal_id} animeItem={animeItem} />
         ))}
       </ul>
+  
+      {/* Tambahkan elemen copyright di sini */}
+      <footer className="copyright">
+        &copy;2024 DefriPrasetyo. All rights reserved.
+      </footer>
     </div>
   );
+  
 }
 
 function AnimeCard({ animeItem }) {
